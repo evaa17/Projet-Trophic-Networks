@@ -35,7 +35,6 @@ Les réseaux sont visualisables graphiquement via Graphviz. Le code couleur des 
 
 ### Format fichier texte (`.txt`)
 
-```
 <img width="1920" height="1080" alt="construction" src="https://github.com/user-attachments/assets/becde2f9-b8c4-4fa3-871c-29a6e738b175" />
 
 
