@@ -4,17 +4,6 @@
 > Stack : C (C11) · Graphviz (DOT) · Gnuplot
 
 ## Présentation
-
-**Trophic Network** est un simulateur en ligne de commande de **réseaux trophiques** (chaînes alimentaires) modélisés sous forme de graphes orientés. Le programme permet d'analyser la structure d'un écosystème, de simuler l'évolution des populations et d'étudier l'impact de perturbations écologiques.
-
-Ces réseaux modélisent les interactions entre espèces vivantes et ressources (lumière, sol, etc.) : les **sommets** représentent les espèces ou ressources, et les **arcs** indiquent les relations de prédation ou d'échange.
-
-### Objectifs principaux
-- **Création de réseaux trophiques** : 3 écosystèmes réels avec complexité croissante (Océan Indien, Savane, Désert du Sahara)
-- **Étude structurelle** : connexité, niveaux trophiques, importance relative des espèces (centralité, impact d'une disparition)
-- **Étude fonctionnelle** : modélisation de la dynamique des populations (prédation, ressources, régulation naturelle)
-- **Simulation** : évolution des populations avec paramètres ajustables, export Gnuplot
-
 ---
 <img width="1920" height="1080" alt="synthese" src="https://github.com/user-attachments/assets/39e7d9d5-d900-4310-b054-fed888b2b441" />
 
@@ -40,33 +29,12 @@ Ces réseaux modélisent les interactions entre espèces vivantes et ressources 
 
 Les réseaux sont visualisables graphiquement via Graphviz. Le code couleur des nœuds représente le niveau trophique :
 
-| Couleur   | Niveau |
-|---        |---                    |
-| 🟢 Vert   | Producteurs primaires |
-| 🟣 Violet | Consommateurs primaires |
-| 🔵 Bleu   | Consommateurs secondaires |
-| 🟠 Orange | Consommateurs tertiaires |
-| 🔴 Rouge  | Carnivores au sommet |
-| 🟤 Marron | Décomposeurs |
-| 🟡 Jaune  | Ressources |
-
 
 <img width="936" height="525" alt="Reseau 2" src="https://github.com/user-attachments/assets/64925bb9-ea89-4cf1-8b9e-92f645721627" />
 <img width="847" height="517" alt="Reseau 1" src="https://github.com/user-attachments/assets/38b2efb7-2253-4095-8a0e-6fde53b7eb80" />
 
 ### Format fichier texte (`.txt`)
 
-```
-Animaux:
-1, Orque, 4
-2, Requin-tigre, 3
-6, Crevette, 1
-9, Bacterie, -2      ← niveau < 0 = décomposeur
-10, Soleil, -1       ← niveau < 0 = ressource
-
-Relations:
-6 3     ← la Crevette (6) est consommée par la Pieuvre (3)
-8 7     ← le Phytoplancton (8) est consommé par la Méduse (7)
 ```
 <img width="1920" height="1080" alt="construction" src="https://github.com/user-attachments/assets/becde2f9-b8c4-4fa3-871c-29a6e738b175" />
 
